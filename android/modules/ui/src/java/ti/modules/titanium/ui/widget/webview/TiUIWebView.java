@@ -131,6 +131,7 @@ public class TiUIWebView extends TiUIView
 		settings.setLoadsImagesAutomatically(true);
 		settings.setLightTouchEnabled(true);
 		settings.setDomStorageEnabled(true); // Required by some sites such as Twitter. This is in our iOS WebView too.
+        webView.getSettings().setDatabasePath("/data/data/" + webView.getContext().getPackageName() + "/databases/");
 
 		// enable zoom controls by default
 		boolean enableZoom = true;
